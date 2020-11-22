@@ -5,12 +5,19 @@
 </template>
 
 <script>
+import router from "../router";
 export default {
-  name: 'HelloWorld',
+  name: "Home",
   props: {
-    msg: String
-  }
-}
+    msg: String,
+  },
+  created() {
+    const authed = sessionStorage.getItem("authed");
+    if (authed !== 1) {
+      router.push("login");
+    }
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

@@ -12,7 +12,7 @@ import Home from "../components/Home.vue";
 // We'll talk about nested routes later.
 const routes = [
   { path: "/", component: Home },
-  { path: "/login", component: Login },
+  { meta: { title: "login" }, path: "/login", component: Login },
   { path: "/hello", component: Hello },
   {
     // will match everything
